@@ -1,0 +1,32 @@
+.bgModal {
+    position: fixed;
+    top: 128px;
+    left: 100px;
+    background-color: white;
+    z-index: 2;
+}
+
+img {
+    width: 1240px;
+    object-fit: cover;
+    height: 415px;
+    border-radius: 25px;
+}
+
+.title {
+    color: var(--primary-color);
+    font-size: 36px;
+    font-weight: 500;
+    margin-top: 30px;
+    margin-left: 0;
+    margin-bottom: 0;
+    line-height: 51px;
+}
+
+.location {
+    color: var(--primary-color);
+    font-size: 18px;
+    font-weight: 500;
+    margin-top: 0;
+    line-height: 26px;
+}

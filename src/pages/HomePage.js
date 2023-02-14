@@ -1,21 +1,24 @@
-import React/* , { useEffect, useState }  */from 'react';
+import React, { useState } from 'react';
 import homeImage from '../assets/images/home-image.png'
 import styles from '../assets/styles/Home.module.css';
 import stockData from '../data/data.js'
-/* import Logement from '../components/Logement.js' */
+import Logement from '../components/Logement.js'
 
 const HomePage = () => {
-/*     const [data, setData] = useState(null);
-    const handleClick = (data) => {
-        setData ({data});
-     }  
-    useEffect(() => {
-    setData(data)
-    },[data]) */
+    const [isExpanded, setIsExpanded] = useState(false);
+    const [expandedCard, setExpandedCard]= useState(null);
+
+    const handleClick = (id) => {
+        setExpandedCard(id)
+        setIsExpanded(true)
+    } 
 
     const articles = stockData.map((i) =>         
-    <article key={i.id} className= {styles.articleContainer} /* onClick={handleClick({i})} */>
+    <article key={i.id} className= {styles.articleContainer} onClick={() => handleClick(i.id)}>
     <h2 className={styles.title}>{i.title}</h2>
+    <div>
+    {isExpanded && expandedCard === i.id && <Logement data= {i}/>}
+    </div>
     </article> 
     );
     return (
@@ -27,15 +30,7 @@ const HomePage = () => {
     <section className={styles.locationBackGround}>
         {articles}
     </section>
-{/*     <div>
-    <Logement data= {data}/>
-    </div> */}
     </>
     );
 }
 export default HomePage;
-/* const Logement = ({data}) => {
-    return (
-        <div>{data.title}</div>
-    )
-    } */
