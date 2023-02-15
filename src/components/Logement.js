@@ -7,8 +7,16 @@ const Logement = ({data}) => {
         <>
         <div className={styles.bgModal}>
         <Carousel images={data.pictures}/>
-        <h1 className={styles.title}>{data.title}</h1>
-        <h2 className={styles.location}>{data.location}</h2>
+        <div className={styles.flexContainer}>
+            <div className={styles.flexColumn}>
+                <h1 className={styles.title}>{data.title}</h1>
+                <h2 className={styles.location}>{data.location}</h2>
+            </div>
+            <div className={styles.flexRow}>
+                <h3>{data.host.name}</h3>
+                <img className={styles.profile} src={data.host.picture} alt="Host"/>
+            </div>
+        </div>
         </div>
         </>
     )
