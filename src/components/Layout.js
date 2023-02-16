@@ -10,18 +10,18 @@ const Layout = () => {
   
     return (
       <>
-      <div className = {styles.flexRow}>
-        <div className = {styles.logo}>
-        <Logo />
-        </div>
-        <nav className = {styles.nav}>
-          <NavLink to="/" className = {styles.navHome} style={style}>
-            Acceuil
-          </NavLink>
-          <NavLink to="/a-propose" className = {styles.navProposed} style={style}>
-            A Propose
-          </NavLink>
-        </nav>
+        <div className = {styles.flexRow}>
+          <div className = {styles.logo}>
+          <Logo />
+          </div>
+          <nav className = {styles.nav}>
+            <NavLink to="/" className = {styles.navHome} style={style}>
+              Acceuil
+            </NavLink>
+            <NavLink to="/a-propose" className = {styles.navProposed} style={style}>
+              A Propose
+            </NavLink>
+          </nav>
         </div>
         <main style={{ padding: '1rem 0' }}>
           <Outlet />

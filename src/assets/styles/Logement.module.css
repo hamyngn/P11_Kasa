@@ -1,6 +1,6 @@
 .bgModal {
     position: fixed;
-    top: 128px;
+    top: 0;
     left: 100px;
     background-color: white;
     z-index: 2;
@@ -17,7 +17,7 @@
     color: var(--primary-color);
     font-size: 18px;
     font-weight: 500;
-    margin-top: 0;
+    margin: 0;
     line-height: 26px;
 }
 
@@ -53,4 +53,61 @@ h3 {
     color: var(--primary-color);
     font-weight: 500;
     text-align: right;
+    margin: 0;
+}
+
+.hostName {
+    width: min-content;
+    margin-right: 10px;
+}
+
+.tagsRateWrap {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.tag {
+    width: 115px;
+    height: 25px;
+    border-radius: 10px;
+    margin-right: 10px;
+    padding: 4px 4px 0px 4px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.tagsContainer {
+    display: flex;
+    justify-items: flex-start;
+}
+
+.starActive, .star {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.starActive {
+    fill: var(--primary-color);
+}
+
+.star {
+    fill: #E3E3E3;
+}
+
+.detailsContainer {
+    display: flex;
+    margin-top: 26px;
+}
+.collapse {
+    flex: 1;
 }

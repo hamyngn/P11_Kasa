@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
-import styles from '../assets/styles/Proposed.module.css';
+import styles from '../assets/styles/Collapse.module.css';
 import {ReactComponent as ShowIcon} from '../assets/images/chevron-down-solid.svg';
 
 
@@ -11,16 +11,16 @@ const Collapse = ({content, title}) => {
             isShown ? (event.currentTarget.style.transform = 'rotate(1turn)') : (event.currentTarget.style.transform = 'rotate(0.5turn)');
     }
     return (
-        <section className = {styles.dropdown}>
-        <div className={styles.flexRow}>
-            <h1>{title}</h1>
-            <div className = {styles.icon}><ShowIcon fill='white' onClick={handleClick}/></div>
+        <div className = {styles.dropdown}>
+            <div className={styles.flexRow}>
+                <h1>{title}</h1>
+                <div className = {styles.icon}><ShowIcon fill='white' onClick={handleClick}/></div>
+            </div>
+            {isShown && 
+            <div className={styles.dropdownContent}>
+                {content}
+            </div>}
         </div>
-        {isShown && 
-        <div className={styles.dropdownContent}>
-            {content}
-        </div>}
-    </section>
     )
 }
 
