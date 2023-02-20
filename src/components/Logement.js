@@ -36,13 +36,21 @@ const Logement = ({data}) => {
             <div className={styles.tagsContainer}>
                 {tags}
             </div>
-            <div style ={{display: "flex"}}>
+            <div style={{display: "flex"}}>
                 {stars}
             </div>
         </div>
         <div className={styles.detailsContainer}>
-            <Collapse className={styles.collapse} title='Description' content={data.description}/>
-            
+            <Collapse
+            className={styles.collapse} 
+            styles={styles} 
+            title='Description' 
+            content={data.description}/>
+            <Collapse 
+            className={styles.collapse} 
+            styles={styles} 
+            title='Equipements' 
+            content={data.equipments.map((i, index) => <div key = {'equipment ' + index}>{i}</div>)}/>
         </div>
         </div>
         </>

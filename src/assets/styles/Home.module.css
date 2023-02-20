@@ -34,16 +34,15 @@
     border-radius: 25px;
 }
 .articleContainer {
-    position: relative;
+    display: flex;
+    align-items: flex-end;
     aspect-ratio: 1 / 1;
     margin-bottom: 50px;
     border-radius: 10px;
     background: linear-gradient(var(--primary-color) 0%, rgb(125, 73, 73) 100%) ;
 }
 .title {
-    position: absolute;
-    bottom: 20px;
-    margin: 0 20px;
+    margin: 20px;
     color: #FFFFFF;
     font-size: 18px;
     text-align: left;

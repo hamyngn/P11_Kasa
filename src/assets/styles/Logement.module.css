@@ -1,9 +1,14 @@
 .bgModal {
-    position: fixed;
-    top: 0;
+    position: absolute;
+    top: 128px;
     left: 100px;
     background-color: white;
     z-index: 2;
+    padding-right: 100px;
+    width: 100%;
+    max-width: 1240px;
+    height: 100%;
+    overflow-y: auto;
 }
 
 .title {
@@ -27,6 +32,7 @@
     height: 64px; 
     background-color: #C4C4C4;
 }
+
 img {
     object-fit: cover;
 }
@@ -107,7 +113,62 @@ h3 {
 .detailsContainer {
     display: flex;
     margin-top: 26px;
+    width: 100%;
+    align-items: flex-start;
 }
+
 .collapse {
-    flex: 1;
+    width: 50%;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
+}
+.dropdown:first-child {
+    margin-right: 76px;
+}
+
+.collapseFlexRow {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 52px;
+    border-radius: 10px;
+    background-color: var(--primary-color);
+    margin: auto;
+    margin-bottom: 62px;
+    z-index: 2;
+}
+
+.icon {
+    display: flex;
+    width: 30px;
+    height: 22px;
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+    margin-left: 1rem;
+}
+
+.dropdownContent {
+    width: 94%;
+    height: 250px;
+    background-color: #F6F6F6;
+    border-radius: 5px;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--primary-color);
+    padding: 40px 12px 10px 20px;
+    margin: auto;
+    margin-top: -68px;
+    margin-bottom: 62px;
+    z-index: 1;
 }

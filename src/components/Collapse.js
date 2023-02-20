@@ -1,10 +1,9 @@
 import * as React from 'react';
 import { useState } from 'react';
-import styles from '../assets/styles/Collapse.module.css';
 import {ReactComponent as ShowIcon} from '../assets/images/chevron-down-solid.svg';
 
 
-const Collapse = ({content, title}) => {
+const Collapse = ({styles, content, title}) => {
     const [isShown, setIsShown] = useState(false);
     const handleClick = (event) => {
             setIsShown(current => !current); 
@@ -12,7 +11,7 @@ const Collapse = ({content, title}) => {
     }
     return (
         <div className = {styles.dropdown}>
-            <div className={styles.flexRow}>
+            <div className={styles.collapseFlexRow}>
                 <h1>{title}</h1>
                 <div className = {styles.icon}><ShowIcon fill='white' onClick={handleClick}/></div>
             </div>
