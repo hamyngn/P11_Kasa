@@ -1,16 +1,23 @@
 .bgModal {
-    position: absolute;
+    position: fixed;
     top: 128px;
     left: 100px;
     background-color: white;
     z-index: 2;
-    padding-right: 100px;
+    margin-right: 100px;
     width: 100%;
     max-width: 1240px;
     height: 100%;
     overflow-y: auto;
 }
-
+.modal {
+    position: absolute;
+    top: 0;
+    background-color: white;
+    height: 100%;
+    width: 100%;
+    max-width: 1240px;
+}
 .title {
     color: var(--primary-color);
     font-size: 36px;

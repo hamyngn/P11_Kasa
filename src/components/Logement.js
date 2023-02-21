@@ -19,6 +19,7 @@ const Logement = ({data}) => {
     return (
         <>
         <div className={styles.bgModal}>
+        <div className={styles.modal}>
         <Carousel images={data.pictures}/>
         <div className={styles.flexContainer}>
             <div className={styles.flexColumn}>
@@ -51,6 +52,7 @@ const Logement = ({data}) => {
             styles={styles} 
             title='Equipements' 
             content={data.equipments.map((i, index) => <div key = {'equipment ' + index}>{i}</div>)}/>
+        </div>
         </div>
         </div>
         </>

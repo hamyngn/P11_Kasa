@@ -32,6 +32,12 @@ const HomePage = () => {
     {isExpanded && expandedCard === i.id && <div ref={ref}><Logement data= {i} /></div>}
     </article> 
     );
+
+    if(isExpanded) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
     return (
     <>
     <div className={styles.container}>
