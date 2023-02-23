@@ -1,43 +1,18 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React from 'react';
 import homeImage from '../assets/images/home-image.png'
 import styles from '../assets/styles/Home.module.css';
 import stockData from '../data/data.js'
-import Logement from '../components/Logement.js'
+import { Link } from 'react-router-dom';
 
 const HomePage = () => {
-    const [isExpanded, setIsExpanded] = useState(false);
-    const [expandedCard, setExpandedCard]= useState(null);
-    const ref = useRef()
-
-    const handleClick = (id) => {
-        setExpandedCard(id)
-        setIsExpanded(true)
-    } 
-    useEffect(() => {
-        const checkIfClickedOutside = e => {
-          if (isExpanded && ref.current && !ref.current.contains(e.target)) {
-            setIsExpanded(false)
-          }
-        }
-        document.addEventListener("mousedown", checkIfClickedOutside)
-    
-        return () => {
-          document.removeEventListener("mousedown", checkIfClickedOutside)
-        }
-      }, [isExpanded])
-
-    const articles = stockData.map((i) =>         
-    <article key={i.id} className= {styles.articleContainer} onClick={() => handleClick(i.id)}>
+    const articles = stockData.map((i) =>     
+    <Link key={i.id} to={'/logement/' + i.id}>   
+    <article className= {styles.articleContainer}>
     <h2 className={styles.title}>{i.title}</h2>
-    {isExpanded && expandedCard === i.id && <div ref={ref}><Logement data= {i} /></div>}
-    </article> 
+    </article>
+    </Link> 
     );
 
-    if(isExpanded) {
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.body.style.overflow = 'unset';
-    }
     return (
     <>
     <div className={styles.container}>

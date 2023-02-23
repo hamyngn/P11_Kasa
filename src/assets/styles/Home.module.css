@@ -1,4 +1,4 @@
-.container, .containerHidden {
+.container {
     position: relative;
     width: 100%;
     height: 223px;
@@ -12,6 +12,7 @@
     object-fit: cover; 
     filter: brightness(70%);
 }
+
 .slogan {
     position: absolute;
     width: 100%;
@@ -33,6 +34,7 @@
     padding: 56px;
     border-radius: 25px;
 }
+
 .articleContainer {
     display: flex;
     align-items: flex-end;
@@ -41,10 +43,45 @@
     border-radius: 10px;
     background: linear-gradient(var(--primary-color) 0%, rgb(125, 73, 73) 100%) ;
 }
+
 .title {
     margin: 20px;
     color: #FFFFFF;
     font-size: 18px;
     text-align: left;
     font-weight: 500;
+}
+
+@media only screen and (max-width: 375px) {
+    .container {
+        height: auto;
+    }
+    .header {
+        height: 111px;
+        border-radius: 10px;
+    }
+    .locationBackGround {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 0px;
+        background-color: #FFFFFF;
+        margin-top: 22px;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .articleContainer {
+        margin-bottom: 20px;
+    }
+
+    .slogan {
+        top: 20px;
+        font-size: 24px;
+        text-align: left;
+        padding-left: 16px;
+    }
+    .articleContainer {
+        height: 255px;
+        aspect-ratio: auto;
+    }
 }

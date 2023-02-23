@@ -1,11 +1,11 @@
 
 .flexRow {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     align-items: center;
   }
 
-.logo {
+.logoContainer {
     flex: 1;
 }
 
@@ -41,7 +41,19 @@ footer {
 }
 
 @media only screen and (max-width: 375px) {
+    .logo {
+        display: inline-block;
+        height: 43px;
+        width: 150px;
+        margin: 0;
+    }
+
     .nav {
         font-size: 12px;
+        text-transform: uppercase;
+    }
+
+    .navHome {
+        margin-right: 10px;
     }
   }

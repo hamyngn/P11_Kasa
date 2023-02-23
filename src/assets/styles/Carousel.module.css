@@ -21,13 +21,6 @@
 .carouselContent {
     display: flex;
     transition: all 250ms linear;
-    -ms-overflow-style: none;  /* hide scrollbar in IE and Edge */
-    scrollbar-width: none;  /* hide scrollbar in Firefox */
-}
-
-/* hide scrollbar in webkit browser */
-.carouselContent::-webkit-scrollbar, .carousel-content::-webkit-scrollbar {
-    display: none;
 }
 
 .carouselContent > * {
@@ -64,4 +57,25 @@
     font-size: 18px;
     color: #FFFFFF;
     left: 50%;
+}
+
+@media only screen and (max-width: 375px) {
+    .carouselContent > * {
+        height: 255px;
+        border-radius: 10px;
+    }
+
+    .previous, .next {
+        height: 20px;
+        width: 12px;
+    }
+
+    .previous {
+        left: 6px;
+    }
+
+    .next {
+        right: 6px;
+    }
+
 }

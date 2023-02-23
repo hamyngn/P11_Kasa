@@ -1,44 +1,42 @@
-import * as React from 'react';
+import React from 'react';
 import styles from '../assets/styles/Logement.module.css'
 import Carousel from './Carousel';
 import {ReactComponent as Star} from '../assets/images/star-solid.svg';
 import Collapse from './Collapse';
 
-const Logement = ({data}) => {
-    const tags = data.tags.map ((i, index) => 
+const Logement = ({logement}) => {
+    const tags = logement.tags.map ((i, index) => 
     <span key={index} className={styles.tag}> {i} </span>
     )
     let stars = []
-    for(let i = 0; i< data.rating; i+=1) {
+    for(let i = 0; i< logement.rating; i+=1) {
         stars.push(<Star key={i + 'active'} className={styles.starActive}/>)
     }
-    for(let i = 0; i< 5 - data.rating; i+=1) {
+    for(let i = 0; i< 5 - logement.rating; i+=1) {
         stars.push(<Star key={i} className={styles.star}/>)
     }
     
     return (
         <>
-        <div className={styles.bgModal}>
-        <div className={styles.modal}>
-        <Carousel images={data.pictures}/>
+        <Carousel images={logement.pictures}/>
         <div className={styles.flexContainer}>
-            <div className={styles.flexColumn}>
-                <h1 className={styles.title}>{data.title}</h1>
-                <h2 className={styles.location}>{data.location}</h2>
+            <div className={styles.firstColumn}>
+                <h1 className={styles.title}>{logement.title}</h1>
+                <h2 className={styles.location}>{logement.location}</h2>
+                <div className={styles.tagsContainer}>
+                {tags}
+                </div>
             </div>
+            <div className={styles.secondColumn}>
             <div className={styles.flexRow}>
                 <div className={styles.hostName}>
-                <h3>{data.host.name}</h3>
+                <h3>{logement.host.name}</h3>
                 </div>
-                <img className={styles.profile} src={data.host.picture} alt="Host"/>
+                <img className={styles.profile} src={logement.host.picture} alt="Host"/>
             </div>
-        </div>
-        <div className={styles.tagsRateWrap}>
-            <div className={styles.tagsContainer}>
-                {tags}
-            </div>
-            <div style={{display: "flex"}}>
+            <div className={styles.rate}>
                 {stars}
+            </div>
             </div>
         </div>
         <div className={styles.detailsContainer}>
@@ -46,14 +44,12 @@ const Logement = ({data}) => {
             className={styles.collapse} 
             styles={styles} 
             title='Description' 
-            content={data.description}/>
+            content={logement.description}/>
             <Collapse 
             className={styles.collapse} 
             styles={styles} 
             title='Equipements' 
-            content={data.equipments.map((i, index) => <div key = {'equipment ' + index}>{i}</div>)}/>
-        </div>
-        </div>
+            content={logement.equipments.map((i, index) => <div key = {'equipment ' + index}>{i}</div>)}/>
         </div>
         </>
     )

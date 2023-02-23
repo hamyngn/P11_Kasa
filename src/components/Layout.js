@@ -11,8 +11,8 @@ const Layout = () => {
     return (
       <>
         <div className = {styles.flexRow}>
-          <div className = {styles.logo}>
-          <Logo />
+          <div className = {styles.logoContainer}>
+          <Logo className = {styles.logo}/>
           </div>
           <nav className = {styles.nav}>
             <NavLink to="/" className = {styles.navHome} style={style}>

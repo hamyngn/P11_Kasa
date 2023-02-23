@@ -4,6 +4,7 @@ import Layout from './components/Layout';
 import ProposedPage from './pages/ProposedPage';
 import NoPage from './pages/NoPage';
 import HomePage from "./pages/HomePage";
+import LogementPage from "./pages/LogementPage";
 
 const routes = createBrowserRouter([
     {
@@ -18,6 +19,10 @@ const routes = createBrowserRouter([
             {
                 path: "/a-propose",
                 element: <ProposedPage />
+            },
+            {
+                path: "/logement/:id",
+                element: <LogementPage />,
             },
         ]
     }
