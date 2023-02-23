@@ -169,6 +169,10 @@ h1 {
         font-size: 18px;
     }
 
+    .hostName {
+        font-size: 12px;
+    }
+
     .location {
         font-size: 14px;
     }
@@ -181,6 +185,7 @@ h1 {
         width: 84px;
         height: 18px;
         border-radius: 5px;
+        font-size: 10px;
     }
 
     .profile {
@@ -204,5 +209,34 @@ h1 {
 
     .rate {
         margin-top: 0;
+    }
+
+    .collapse {
+        width: 100%;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown:first-child {
+        margin-right: 0;
+    }
+
+    .collapseFlexRow {
+        margin-bottom: 20px;
+        height: 30px;
+        border-radius: 5px;
+    }
+
+    .dropdownContent {
+        width: 94%;
+        height: 140px;
+        font-size: 12px;
+        padding: 20px 7px 0 10px;
+        margin: auto;
+        margin-top: -23px;
+        margin-bottom: 20px;
+        z-index: 1;
     }
 }
