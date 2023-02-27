@@ -14,10 +14,13 @@
 }
 
 .slogan {
+    display: flex;
     position: absolute;
     width: 100%;
-    top: 78px;
-    text-align: center;
+    top: 0px;
+    justify-content: center;
+    align-items: center;
+    height: 223px;
     color: #FFFFFF;
     font-size: 48px;
     line-height: 143%;
@@ -52,14 +55,43 @@
     font-weight: 500;
 }
 
-@media only screen and (max-width: 375px) {
+
+@media only screen and (min-width: 425px) and (max-width: 1023px) {
     .container {
         height: auto;
     }
+
+    .locationBackGround {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        background-color: #FFFFFF;
+        margin-top: 22px;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .articleContainer {
+        margin-bottom: 0;
+    }
+
+    .slogan {
+        font-size: 36px;
+        justify-content: flex-start;
+        padding-left: 5%;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    .container {
+        height: auto;
+    }
+
     .header {
         height: 111px;
         border-radius: 10px;
     }
+
     .locationBackGround {
         display: grid;
         grid-template-columns: repeat(1, 1fr);
@@ -75,11 +107,12 @@
     }
 
     .slogan {
-        top: 20px;
         font-size: 24px;
-        text-align: left;
+        justify-content: flex-start;
         padding-left: 16px;
+        height: 111px;
     }
+
     .articleContainer {
         height: 255px;
         aspect-ratio: auto;

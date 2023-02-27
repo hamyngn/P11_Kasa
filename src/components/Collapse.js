@@ -12,13 +12,14 @@ const Collapse = ({styles, content, title}) => {
     return (
         <div className = {styles.dropdown}>
             <div className={styles.collapseFlexRow}>
-                <h1>{title}</h1>
+                <h1 className={styles.dropTitle}>{title}</h1>
                 <div className = {styles.icon}><ShowIcon fill='white' onClick={handleClick}/></div>
             </div>
             {isShown && 
-            <div className={styles.dropdownContent}>
-                {content}
-            </div>}
+            <p className={styles.dropdownContent}>
+            {content}
+            </p>
+            }
         </div>
     )
 }

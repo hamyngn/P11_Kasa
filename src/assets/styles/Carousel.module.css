@@ -59,6 +59,17 @@
     left: 50%;
 }
 
+@media only screen and (max-width: 768px) {
+    .carouselContent > * {
+        height: 350px;
+    }
+
+    .previous, .next {
+        height: 40px;
+        width: 23px;
+    }
+}
+
 @media only screen and (max-width: 375px) {
     .carouselContent > * {
         height: 255px;

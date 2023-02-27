@@ -10,7 +10,7 @@ const Layout = () => {
   
     return (
       <>
-        <div className = {styles.flexRow}>
+        <header className = {styles.flexRow}>
           <div className = {styles.logoContainer}>
           <Logo className = {styles.logo}/>
           </div>
@@ -22,13 +22,13 @@ const Layout = () => {
               A Propose
             </NavLink>
           </nav>
-        </div>
+        </header>
         <main style={{ padding: '1rem 0' }}>
           <Outlet />
         </main>
         <footer>
-        <div className = {styles.footerLogo}>
-        <Logo fill='white' height='36px' />
+        <div>
+        <Logo className = {styles.footerLogo} />
         </div>
         <span>© 2020 Kasa. All rights reserved</span>
         </footer>

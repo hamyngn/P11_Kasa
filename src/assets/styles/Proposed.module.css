@@ -33,7 +33,7 @@
     margin-right: 2rem;
 }
 
-h1 {
+.dropTitle {
     font-size: 24px;
     font-weight: 500;
     color: #FFFFFF;
@@ -41,16 +41,29 @@ h1 {
 }
 
 .dropdownContent {
-    width: 81%;
+    width: 82%;
     height: auto;
     background-color: #F6F6F6;
     border-radius: 5px;
     font-size: 24px;
     font-weight: 400;
     color: var(--primary-color);
-    padding: 36px 27px 19px 18px;
+    padding: 36px 18px 18px;
     margin: auto;
     margin-top: -32px;
     margin-bottom: 30px;
     z-index: 1;
+}
+
+@media only screen and (max-width: 1024px) {
+    .collapseFlexRow {
+        width: 100%;
+    }
+    .dropdownContent {
+        width: auto;
+        margin-bottom: 20px;
+    }
+    .collapseFlexRow {
+        margin-bottom: 20px;
+    }
 }

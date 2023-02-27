@@ -41,6 +41,8 @@ img {
 .flexRow {
     display: flex;
     flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 h3 {
@@ -75,6 +77,7 @@ h3 {
     display: flex;
     justify-items: flex-start;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 .rate {
@@ -98,7 +101,7 @@ h3 {
 
 .detailsContainer {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
     margin-top: 26px;
     width: 100%;
     align-items: flex-start;
@@ -138,7 +141,7 @@ h3 {
     height: 22px;
 }
 
-h1 {
+.dropTitle {
     font-size: 18px;
     font-weight: 500;
     color: #FFFFFF;
@@ -146,7 +149,7 @@ h1 {
 }
 
 .dropdownContent {
-    width: 94%;
+    width: auto;
     height: 250px;
     background-color: #F6F6F6;
     border-radius: 5px;
@@ -154,10 +157,69 @@ h1 {
     font-weight: 400;
     color: var(--primary-color);
     padding: 40px 12px 10px 20px;
-    margin: auto;
     margin-top: -68px;
     margin-bottom: 62px;
     z-index: 1;
+    overflow: auto;
+}
+
+@media only screen and (max-width: 1400px) {
+    .secondColumn {
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content:space-between;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .detailsContainer {
+        flex-wrap: wrap;
+    }
+
+    .collapse {
+        width: 100%;
+    }
+    
+    .dropdown {
+        width: 100%;   
+    }
+
+    .dropdown:first-child {
+        margin-right: 0;
+    }
+
+    .tag {
+        margin-bottom: 16px;
+        width: 84px;
+        height: 18px;
+        border-radius: 5px;
+        font-size: 10px;
+    }
+}
+
+@media only screen and (min-width: 375px) and (max-width: 768px) {
+    .starActive, .star {
+        width: 20px;
+        height: 20px;
+        margin-right: 5px;
+    }
+
+    .collapseFlexRow, .dropdownContent {
+        margin-bottom: 30px;
+    }
+
+    .dropdownContent {
+        height: 200px;
+    }
+
+    .title {
+        font-size: 24px;
+    }
+
+    .location {
+        font-size: 16px;
+    }
 }
 
 @media only screen and (max-width: 375px) {
@@ -181,46 +243,19 @@ h1 {
         margin-top: 10px;
     }
 
-    .tag {
-        width: 84px;
-        height: 18px;
-        border-radius: 5px;
-        font-size: 10px;
-    }
-
     .profile {
         width: 32px;
         height: 32px; 
-    }
-
-    .starActive, .star {
-        width: 15px;
-        height: 15px;
-        margin-right: 5px;
-    }
-
-    .secondColumn {
-        margin-top: 16px;
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content:space-between;
-        width: 100%;
     }
 
     .rate {
         margin-top: 0;
     }
 
-    .collapse {
-        width: 100%;
-    }
-
-    .dropdown {
-        width: 100%;
-    }
-
-    .dropdown:first-child {
-        margin-right: 0;
+    .starActive, .star {
+        width: 15px;
+        height: 15px;
+        margin-right: 5px;
     }
 
     .collapseFlexRow {
@@ -230,11 +265,9 @@ h1 {
     }
 
     .dropdownContent {
-        width: 94%;
         height: 140px;
         font-size: 12px;
         padding: 20px 7px 0 10px;
-        margin: auto;
         margin-top: -23px;
         margin-bottom: 20px;
         z-index: 1;

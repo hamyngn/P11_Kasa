@@ -27,25 +27,34 @@
 }
 
 footer {
+    display: block;
     height: 210px;
     background-color: #000000;
     text-align: center;
     color: #FFFFFF;
     font-size: 24px;
     font-weight: 500;
+    margin-left: -100px;
+    margin-right: -100px;
 }
 
 .footerLogo {
     padding-top: 66px;
     padding-bottom: 32px;
+    height: 36px;
+    width: auto;
+    display: inline-block;
+}
+
+footer svg path {
     fill: #FFFFFF;
 }
 
-@media only screen and (max-width: 375px) {
+@media only screen and (max-width: 768px) {
     .logo {
         display: inline-block;
         height: 43px;
-        width: 150px;
+        width: auto;
         margin: 0;
     }
 
@@ -59,6 +68,15 @@ footer {
     }
 
     footer {
+        margin-left: -40px;
+        margin-right: -40px;
         font-size: 12px;
     }
-  }
+}
+
+@media only screen and (max-width: 375px) {
+    footer {
+        margin-left: -20px;
+        margin-right: -20px;
+    }
+}
