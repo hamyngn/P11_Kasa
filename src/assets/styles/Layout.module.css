@@ -80,3 +80,9 @@ footer svg path {
         margin-right: -20px;
     }
 }
+
+@media only screen and (max-width: 320px) {
+    .logo {
+        height: 30px;
+    }
+}
