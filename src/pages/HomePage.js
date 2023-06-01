@@ -8,6 +8,9 @@ const HomePage = () => {
     const articles = stockData.map((i) =>     
     <Link key={i.id} to={'/logement/' + i.id}>   
     <article className= {styles.articleContainer}>
+    <div>
+    <img className={styles.cover} src={i.cover} alt={i.title}></img>
+    </div>
     <h2 className={styles.title}>{i.title}</h2>
     </article>
     </Link> 

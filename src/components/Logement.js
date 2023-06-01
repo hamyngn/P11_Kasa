@@ -49,7 +49,7 @@ const Logement = ({logement}) => {
             className={styles.collapse} 
             styles={styles} 
             title='Equipements' 
-            content={logement.equipments.map((i, index) => <div key = {'equipment ' + index}>{i}</div>)}/>
+            content={logement.equipments.map((i, index) => <span key = {'equipment ' + index}>{i}<br></br></span>)}/>
         </div>
         </>
     )

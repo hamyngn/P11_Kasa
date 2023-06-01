@@ -71,3 +71,9 @@
         margin-bottom: 20px;
     }
 }
+
+@media only screen and (max-width: 375px) {
+    .dropdownContent {
+        font-size: 12px;
+    }
+}
